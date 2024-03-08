@@ -8,6 +8,15 @@ import org.ptech.java.citas.entities.enums.TipoDocumento;
 public class Enfermero extends Usuario {
 
     private List<String> procedimiento;
+    
+
+
+
+    @Override
+    public String toString() {
+        return "Enfermero" +" | "+ "procedimiento: " + procedimiento + super.nombres +" "+ super.apellidos;
+    }
+
 
     public Enfermero(int id, String nombres, String apellidos, TipoDocumento tipoDocumento, Long numeroIdentificacion) {
         // llamar el const¿ructor de la super clase
@@ -24,5 +33,11 @@ public class Enfermero extends Usuario {
     public List<String> getProcedimiento() {
         return procedimiento;
     }
+
+
+    public void setProcedimiento(List<String> procedimiento) {
+        this.procedimiento = procedimiento;
+    }
+    
 
 }
